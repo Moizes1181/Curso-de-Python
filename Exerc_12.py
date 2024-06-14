@@ -1,3 +1,4 @@
+#Exercício 12
 altura_em_cm= float(input("Digite sua altura em cm: "))
 altura = altura_em_cm / 100
 print(altura)
