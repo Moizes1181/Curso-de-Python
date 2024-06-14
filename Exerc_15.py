@@ -13,6 +13,7 @@ Mostre os dados para o usuário conforme a tabela abaixo:
     (-) Descontos: R$
     (=) Salário líquido: R$
 """
+
 valor_hora_trabalhada = float(input("Informe o valor da hora trabalhada: "))
 numero_hora_trabalhadas = float(input("Informe o número de horas trabalhadas: "))
 ir = 0.11 
