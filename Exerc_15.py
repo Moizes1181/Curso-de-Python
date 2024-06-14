@@ -13,15 +13,17 @@ Mostre os dados para o usuário conforme a tabela abaixo:
     (-) Descontos: R$
     (=) Salário líquido: R$
 """
-
 valor_hora_trabalhada = float(input("Informe o valor da hora trabalhada: "))
 numero_hora_trabalhadas = float(input("Informe o número de horas trabalhadas: "))
 ir = 0.11 
 inss = 0.08
 sindicado = 0.05
 salario_bruto = valor_hora_trabalhada * numero_hora_trabalhadas
+salario_bruto_formatado = '{:,.2f}'.format(salario_bruto).replace(',', ' ').replace('.', ',').replace(' ', '.')
 descontos = (salario_bruto*ir) + (salario_bruto*inss) + (salario_bruto*sindicado)
-print(f"Salario bruto é: R$ {salario_bruto:.2f}".replace('.', ','))
-print(f"O total de descontoe é: R$ {descontos:.2f}".replace('.', ','))
+descontos_formatado = '{:,.2f}'.format(descontos).replace(',', ' ').replace('.', ',').replace(' ', '.')
+print(f"Salario bruto é: R$ {salario_bruto_formatado}")
+print(f"O total de desconto é: R$ {descontos_formatado}")
 salario_liquido = '{:,.2f}'.format(salario_bruto - descontos).replace(',', ' ').replace('.', ',').replace(' ', '.')
 print(f"O salário liquido é:R$ {salario_liquido}")
+
